@@ -1,0 +1,12 @@
+Motor dimension: 
+part1 - z=24 d=36
+part2 - z=40 d=32
+
+Disk:
+t=5.5 D=150
+
+Pillar dimension:
+x=8.5 y=5.5 z=52.5
+
+
+
