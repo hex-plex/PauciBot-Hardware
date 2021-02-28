@@ -1,0 +1,387 @@
+<?xml version="1.0"?>
+<!-- created with Phobos 1.0.1 "Capricious Choutengan" -->
+  <robot name="Paucibot">
+
+    <link name="BaseLink">
+      <inertial>
+        <origin xyz="0 0 -0.00275" rpy="0 0 0"/>
+        <mass value="0.07"/>
+        <inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0002"/>
+      </inertial>
+      <visual name="lower_disc">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="../meshes/stl/Circle.004.stl" scale="0.075 0.075 0.06329"/>
+        </geometry>
+      </visual>
+      <collision name="lower_disc">
+        <origin xyz="0 0 -0.00275" rpy="0 0 0"/>
+        <geometry>
+          <cylinder radius="0.075" length="0.0055"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="Holder1_link">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.03"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+      <visual name="Holder2">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="../meshes/stl/Cube.010.stl" scale="0.95238 0.7619 0.03429"/>
+        </geometry>
+      </visual>
+      <collision name="Holder2">
+        <origin xyz="0.00045 0 0.01455" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.0509 0.04 0.0309"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="Holder2_link">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.03"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+      <visual name="Holder1">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="../meshes/stl/Cube.009.stl" scale="0.95238 0.7619 0.03429"/>
+        </geometry>
+      </visual>
+      <collision name="Holder1">
+        <origin xyz="0.00045 0 0.01455" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.0509 0.04 0.0309"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="Motor1_link">
+      <inertial>
+        <origin xyz="0 0 -0.02034" rpy="0 0 0"/>
+        <mass value="0.225"/>
+        <inertia ixx="7e-05" ixy="0" ixz="0" iyy="3e-05" iyz="0" izz="2e-05"/>
+      </inertial>
+      <visual name="Motor1">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="../meshes/stl/Cylinder.stl" scale="1.0 1.0 1.0"/>
+        </geometry>
+      </visual>
+      <collision name="Motor1">
+        <origin xyz="0 0 -0.02034" rpy="0 0 0"/>
+        <geometry>
+          <cylinder radius="0.018" length="0.06216"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="Motor2_link">
+      <inertial>
+        <origin xyz="0 0 -0.02027" rpy="0 0 0"/>
+        <mass value="0.225"/>
+        <inertia ixx="7e-05" ixy="0" ixz="0" iyy="3e-05" iyz="0" izz="2e-05"/>
+      </inertial>
+      <visual name="Motor2">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="../meshes/stl/Cylinder.001.stl" scale="1.0 1.0 1.0"/>
+        </geometry>
+      </visual>
+      <collision name="Motor2">
+        <origin xyz="0 0 -0.02027" rpy="0 0 0"/>
+        <geometry>
+          <cylinder radius="0.018" length="0.06262"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="Pillar1_link">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.001"/>
+        <inertia ixx="2e-05" ixy="0" ixz="0" iyy="2e-05" iyz="0" izz="2e-05"/>
+      </inertial>
+      <visual name="Pillar1">
+        <origin xyz="0 0.00474 0.00025" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.0122 0.0122 0.053"/>
+        </geometry>
+      </visual>
+      <collision name="Pillar1">
+        <origin xyz="0 0.00474 0.00025" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.0122 0.0122 0.053"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="Pillar2_link">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.001"/>
+        <inertia ixx="2e-05" ixy="0" ixz="0" iyy="2e-05" iyz="0" izz="2e-05"/>
+      </inertial>
+      <visual name="Pillar2">
+        <origin xyz="0 0.00475 0.00025" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.0122 0.0122 0.053"/>
+        </geometry>
+      </visual>
+      <collision name="Pillar2">
+        <origin xyz="0 0.00475 0.00025" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.0122 0.0122 0.053"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="Pillar3_link">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.001"/>
+        <inertia ixx="2e-05" ixy="0" ixz="0" iyy="2e-05" iyz="0" izz="2e-05"/>
+      </inertial>
+      <visual name="Pillar3">
+        <origin xyz="0 0.00474 0.00025" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.0122 0.0122 0.053"/>
+        </geometry>
+      </visual>
+      <collision name="Pillar3">
+        <origin xyz="0 0.00474 0.00025" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.0122 0.0122 0.053"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="TopDisk">
+      <inertial>
+        <origin xyz="0 0 -0.00275" rpy="0 0 0"/>
+        <mass value="0.07"/>
+        <inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0002"/>
+      </inertial>
+      <visual name="upper_disc.001">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <cylinder radius="0.075" length="0.0055"/>
+        </geometry>
+      </visual>
+      <collision name="upper_disc.001">
+        <origin xyz="0 0 -0.00275" rpy="0 0 0"/>
+        <geometry>
+          <cylinder radius="0.075" length="0.0055"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="UpperLink">
+      <inertial>
+        <origin xyz="0 0 -0.00275" rpy="0 0 0"/>
+        <mass value="0.07"/>
+        <inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0002"/>
+      </inertial>
+      <collision name="upper_disc">
+        <origin xyz="0 0 -0.00275" rpy="0 0 0"/>
+        <geometry>
+          <cylinder radius="0.075" length="0.0055"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="UpperPillar1">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.001"/>
+        <inertia ixx="2e-05" ixy="0" ixz="0" iyy="2e-05" iyz="0" izz="2e-05"/>
+      </inertial>
+      <visual name="Pillar1.001">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.0122 0.0122 0.053"/>
+        </geometry>
+      </visual>
+      <collision name="Pillar1.001">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.0122 0.0122 0.053"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="UpperPillar2">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.07"/>
+        <inertia ixx="4e-05" ixy="0" ixz="0" iyy="4e-05" iyz="0" izz="2e-05"/>
+      </inertial>
+      <visual name="Pillar3.001">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.0122 0.0122 0.053"/>
+        </geometry>
+      </visual>
+      <collision name="Pillar3.001">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.0122 0.0122 0.053"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="UpperPillar3">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.001"/>
+        <inertia ixx="2e-05" ixy="0" ixz="0" iyy="2e-05" iyz="0" izz="2e-05"/>
+      </inertial>
+      <visual name="Pillar2.001">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.0122 0.0122 0.053"/>
+        </geometry>
+      </visual>
+      <collision name="Pillar2.001">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.0122 0.0122 0.053"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="wheel1_link">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.13"/>
+        <inertia ixx="4e-05" ixy="0" ixz="0" iyy="7e-05" iyz="0" izz="0.00117"/>
+      </inertial>
+      <visual name="Wheel1">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="../meshes/stl/Torus.stl" scale="0.81132 0.81132 1.89758"/>
+        </geometry>
+      </visual>
+      <collision name="Wheel1">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <cylinder radius="0.043" length="0.03798"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="wheel2_link">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.13"/>
+        <inertia ixx="4e-05" ixy="0" ixz="0" iyy="7e-05" iyz="0" izz="0.00117"/>
+      </inertial>
+      <visual name="Wheel2">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="../meshes/stl/Torus.002.stl" scale="0.81132 0.81132 1.89758"/>
+        </geometry>
+      </visual>
+      <collision name="Wheel2">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <cylinder radius="0.043" length="0.03798"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <joint name="Holder1_link" type="fixed">
+      <origin xyz="0 0.075 -0.0323" rpy="1.5708 -1.5708 0"/>
+      <parent link="BaseLink"/>
+      <child link="Holder1_link"/>
+    </joint>
+
+    <joint name="Holder2_link" type="fixed">
+      <origin xyz="0 -0.075 -0.0323" rpy="-1.5708 -1.5708 0"/>
+      <parent link="BaseLink"/>
+      <child link="Holder2_link"/>
+    </joint>
+
+    <joint name="Motor1_link" type="fixed">
+      <origin xyz="0.002 0 0.0138" rpy="0 3.14159 0"/>
+      <parent link="Holder1_link"/>
+      <child link="Motor1_link"/>
+    </joint>
+
+    <joint name="Motor2_link" type="fixed">
+      <origin xyz="0.002 0 0.0139" rpy="0 -3.14159 0"/>
+      <parent link="Holder2_link"/>
+      <child link="Motor2_link"/>
+    </joint>
+
+    <joint name="Pillar1_link" type="fixed">
+      <origin xyz="-0.06127 0.03537 0.02625" rpy="0 0 -2.0944"/>
+      <parent link="BaseLink"/>
+      <child link="Pillar1_link"/>
+    </joint>
+
+    <joint name="Pillar2_link" type="fixed">
+      <origin xyz="0 -0.07075 0.02625" rpy="0 0 0"/>
+      <parent link="BaseLink"/>
+      <child link="Pillar2_link"/>
+    </joint>
+
+    <joint name="Pillar3_link" type="fixed">
+      <origin xyz="0.06127 0.03537 0.02625" rpy="0 0 2.0944"/>
+      <parent link="BaseLink"/>
+      <child link="Pillar3_link"/>
+    </joint>
+
+    <joint name="TopDisk" type="fixed">
+      <origin xyz="0 0.066 0.032" rpy="0 0 0"/>
+      <parent link="UpperPillar3"/>
+      <child link="TopDisk"/>
+    </joint>
+
+    <joint name="UpperLink" type="fixed">
+      <origin xyz="0 0.07075 0.03175" rpy="0 0 0"/>
+      <parent link="Pillar2_link"/>
+      <child link="UpperLink"/>
+    </joint>
+
+    <joint name="UpperPillar1" type="fixed">
+      <origin xyz="0.05716 -0.033 0.027" rpy="0 0 1.0472"/>
+      <parent link="UpperLink"/>
+      <child link="UpperPillar1"/>
+    </joint>
+
+    <joint name="UpperPillar2" type="fixed">
+      <origin xyz="-0.05716 -0.033 0.027" rpy="0 0 -1.0472"/>
+      <parent link="UpperLink"/>
+      <child link="UpperPillar2"/>
+    </joint>
+
+    <joint name="UpperPillar3" type="fixed">
+      <origin xyz="0 0.066 0.027" rpy="0 0 -3.14159"/>
+      <parent link="UpperLink"/>
+      <child link="UpperPillar3"/>
+    </joint>
+
+    <joint name="wheel1_link" type="continuous">
+      <origin xyz="-0.005 0 -0.0215" rpy="0 0 -1.5708"/>
+      <parent link="Holder1_link"/>
+      <child link="wheel1_link"/>
+      <axis xyz="0 0 1.0"/>
+      <limit effort="0.26" velocity="15.708"/>
+    </joint>
+
+    <joint name="wheel2_link" type="continuous">
+      <origin xyz="0.007 0 0.0354" rpy="0 0 1.5708"/>
+      <parent link="Motor2_link"/>
+      <child link="wheel2_link"/>
+      <axis xyz="0 0 1.0"/>
+      <limit effort="0.26" velocity="15.708"/>
+    </joint>
+
+  </robot>
