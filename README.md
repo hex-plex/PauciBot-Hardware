@@ -1,7 +1,7 @@
 # PauciBot-Hardware
 
 ## Abstract
-This Repository contains the hardware designs of the Two Wheeled ROS enabled robot capable of self - balancing and also able to run SLAM and Localize itself with just Odometry, Encoders on the wheel and the Camera used with Depth Maps[[1]]() to get a partially accurate Depth information of the surronding. This is partially inspired from the Turtlebot[[2]]() but it must be kept in mind the algorithm has be able to model the two wheeled bot to even account for its self balancing action which was solved using accurate System Modelling[[3]]().
+This Repository contains the hardware designs of the Two Wheeled ROS enabled robot capable of self - balancing and also able to run SLAM and Localize itself with just Odometry, Encoders on the wheel and the Camera used with Depth Maps[[1]](#1) to get a partially accurate Depth information of the surronding. This is partially inspired from the Turtlebot[[2]](#2) but it must be kept in mind the algorithm has be able to model the two wheeled bot to even account for its self balancing action which was solved using accurate System Modelling[[3]](#3).
 
 ![Bot in all its glory](images/Paucibot.jpg)
 
@@ -10,7 +10,7 @@ The above is the bot in all its glory, I had built The Hardware before running s
 
 <br/>
 
-After the construction it was quite easy to make a 3D design for the simulators. My Weapon of choice Phobos[[4]]() and Blender.
+After the construction it was quite easy to make a 3D design for the simulators. My Weapon of choice Phobos[[4]](#4) and [Blender](https://www.blender.org/).
 
 Below is a simple design of the bot in blender.
 
@@ -57,5 +57,11 @@ This is a high quality webcam that can be easily used for capturing images at in
 
 
 ## References
+<a id="1">[1]</a> Unsupervised Learning of Depth and Ego-Motion from Monocular Video Using 3D Geometric Constraints. Reza Mahjourian, Martin Wicke, Anelia Angelova [[link]](https://sites.google.com/view/vid2depth)
 
-A Tutorial on Modelling and Control of Two- Wheeled Self-Balancing Robot with Stepper Motor https://www.researchgate.net/publication/334731253_A_Tutorial_on_Modelling_and_Control_of_Two-_Wheeled_Self-Balancing_Robot_with_Stepper_Motor
+<a id="2">[2]</a> Turtlebot is a ROS standard platform robot. [[link]](https://emanual.robotis.com/docs/en/platform/turtlebot3/overview/)
+
+<a id="3">[3]</a>
+A Tutorial on Modelling and Control of Two- Wheeled Self-Balancing Robot with Stepper Motor [[link]](https://www.researchgate.net/publication/334731253_A_Tutorial_on_Modelling_and_Control_of_Two-_Wheeled_Self-Balancing_Robot_with_Stepper_Motor)
+
+<a id="4">[4]</a> Phobos is an add-on for Blender. [[link]](https://github.com/dfki-ric/phobos)
