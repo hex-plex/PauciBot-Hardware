@@ -29,12 +29,13 @@ class Bot:
             self.target_pos = ((target_x, target_y, target_z), (target_roll, target_pitch, target_yaw))
         else:
             self.target_pos = target_pos
+        return target_pos
     def control(self):
         '''
         This is responsible for the bots control algorithm using PID 
         '''
         pos, orie = p.getBasePositionAndOrientation(self.id, physicsClientId = self.pClient)
-    	euler = p.getEulerFromQuaternion(orie)
+        euler = p.getEulerFromQuaternion(orie)
         feedback = control_instance(pos, euler)
         p.setJointMotorControl2(self.id,
                                 self.wheels[0],
@@ -42,7 +43,7 @@ class Bot:
                                 targetVelocity = -max(min(15,feedback),-15),
                                 force = self.maxForce,
                                 physicsClientId = self.pClient)
-    	p.setJointMotorControl2(self.id,
+        p.setJointMotorControl2(self.id,
                                 self.wheels[1],
                                 p.VELOCITY_CONTROL,
                                 targetVelocity= -max(min(15,feedback),-15),
