@@ -16,7 +16,7 @@ init = time()
 target_pos = 0
 prev_error = None
 while(1):
-	orie = p.getBasePositionAndOrientation(bot)[1]
+	orie = p.getBasePositionAndOrientation(bot[1])
 	euler = p.getEulerFromQuaternion(orie)
 	pitch = euler[1]
 	dt = time()-init
