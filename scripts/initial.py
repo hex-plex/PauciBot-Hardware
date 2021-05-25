@@ -13,7 +13,7 @@ for joint in range(numJoints):
 wheels = [ 2, 5 ]
 targetVel = 15
 maxForce = 6
-kp, kd, ki = 0.05, 0.005, 0.001
+kp, kd, ki = 0.005, 0.005, 0.000
 init = time()
 target_pos = 0
 prev_error = None

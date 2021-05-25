@@ -6,8 +6,11 @@ from time import sleep, time
 p.connect(p.GUI)
 p.setAdditionalSearchPath(pybullet_data.getDataPath())
 p.loadURDF("plane.urdf")
-botpos=[0,0,0.1]
-bot = p.loadURDF("urdf/Paucibot.urdf",*botpos)
+botpos=[0,0,0.08]
+botori = p.getQuaternionFromEuler([0, 0, 0])
+
+bot = p.loadURDF("urdf/Paucibot.urdf", *botpos, *botori)
+# bot = p.loadURDF("urdf/Paucibot.urdf",*botpos)
 p.setGravity(0,0,-10)
 numJoints = p.getNumJoints(bot)
 for joint in range(numJoints):
@@ -17,7 +20,7 @@ targetVel = 15
 maxForce = 6
 kp, kd, ki = 255,26,34
 init = time()
-target_pos = 0
+target_pos = 0.0
 prev_error = 0
 inti_term = 0
 encoder_pos = [0,0]

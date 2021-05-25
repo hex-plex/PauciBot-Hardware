@@ -45,10 +45,14 @@ while(1):
 	# if prev_error is None:
 	# 	prev_error = error
 	# feedback = kp*error + kd*(error - prev_error)/dt + (ki*dt*error/abs(error+1e-6) if abs(error)<0.01 else 0)
-	k = lqr(A,B,Q,R)[0]
+	k , s , e = lqr(A,B,Q,R)
 	print("k:   ")
-	k = np.resize(k,(4,1))
+	# k = np.resize(k,(4,1))
 	print(k)
+	print(" s :")
+	print(s)
+	print(" e :")
+	print(e)
 	if abs(error)<0.01:
 		inti_term += error*dt
 	else:
